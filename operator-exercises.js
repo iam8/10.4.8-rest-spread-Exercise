@@ -11,31 +11,16 @@ function filterOutOdds() {
 }
 
 // Refactored (ES2015) version of the filterOutOdds() function
-function refactoredFilterOutOdds(...nums) {
-
-    return nums.filter((num) => num % 2 === 0);
-}
+const refactoredFilterOutOdds = (...nums) => nums.filter((num) => num % 2 === 0);
 
 // findMin function
-function findMin(...nums) {
-
-    if (!nums.length) {
-        return;
-    }
-
-    return nums.reduce((min, curVal) => {
-        return curVal < min ? curVal : min;
-    })
-}
+const findMin = (...nums) => Math.min(...nums);
 
 // mergeObjects function
-function mergeObjects(obj1, obj2) {
-
-    return {...obj1, ...obj2};
-}
+const mergeObjects = (obj1, obj2) => ({...obj1, ...obj2});
 
 // doubleAndReturnArgs function
-function doubleAndReturnArgs(array, ...extraNums) {
+const doubleAndReturnArgs = (array, ...extraNums) => {
 
     const doubledExtras = extraNums.map((num) => num * 2);
     return [...array, ...doubledExtras];
@@ -68,7 +53,7 @@ const extend = (array1, array2) => {
 */
 const addKeyVal = (obj, key, val) => {
 
-    return key in obj ? {...obj} : {...obj, [key] : val};
+    return key in obj ? {...obj} : {...obj, [key]: val};
 
 }
 
