@@ -15,3 +15,15 @@ function refactoredFilterOutOdds(...nums) {
 
     return nums.filter((num) => num % 2 === 0);
 }
+
+// findMin function
+function findMin(...nums) {
+
+    if (!nums.length) {
+        return;
+    }
+
+    return nums.reduce((min, curVal) => {
+        return curVal < min ? curVal : min;
+    })
+}
