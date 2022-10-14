@@ -44,9 +44,16 @@ function doubleAndReturnArgs(array, ...extraNums) {
 
 // Slice and dice section --------------------------------------------------------------------------
 
-/** remove a random element in the items array and return a new array without that item. */
-function removeRandom(items) {
+/** Remove a random element in the items array and return a new array without that item. */
+const removeRandom = (items) => {
 
+    // Choose a random index in the items array
+    const randIndex = Math.floor(Math.random() * items.length);
+
+    // Make a copy of the items array and splice this item from it
+    const itemsCopy = [...items];
+    itemsCopy.splice(randIndex, 1);
+    return itemsCopy;
 }
 
 /** Return a new array with every item in array1 and array2. */
