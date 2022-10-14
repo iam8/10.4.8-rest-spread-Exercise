@@ -70,8 +70,11 @@ const addKeyVal = (obj, key, val) => {
 
 
 /** Return a new object with a key removed. */
-function removeKey(obj, key) {
+const removeKey = (obj, key) => {
 
+    const objCopy = {...obj};
+    delete objCopy[key];
+    return objCopy;
 }
 
 
