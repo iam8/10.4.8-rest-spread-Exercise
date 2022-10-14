@@ -57,8 +57,9 @@ const removeRandom = (items) => {
 }
 
 /** Return a new array with every item in array1 and array2. */
-function extend(array1, array2) {
+const extend = (array1, array2) => {
 
+    return [...array1, ...array2];
 }
 
 /** Return a new object with all the keys and values from obj and a new key/value pair. */
