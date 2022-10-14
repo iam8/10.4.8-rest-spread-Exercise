@@ -34,3 +34,9 @@ function mergeObjects(obj1, obj2) {
     return {...obj1, ...obj2};
 }
 
+// doubleAndReturnArgs function
+function doubleAndReturnArgs(array, ...extraNums) {
+
+    const doubledExtras = extraNums.map((num) => num * 2);
+    return [...array, ...doubledExtras];
+}
