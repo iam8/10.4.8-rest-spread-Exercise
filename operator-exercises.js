@@ -27,3 +27,10 @@ function findMin(...nums) {
         return curVal < min ? curVal : min;
     })
 }
+
+// mergeObjects function
+function mergeObjects(obj1, obj2) {
+
+    return {...obj1, ...obj2};
+}
+
