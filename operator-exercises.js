@@ -62,7 +62,10 @@ const extend = (array1, array2) => {
     return [...array1, ...array2];
 }
 
-/** Return a new object with all the keys and values from obj and a new key/value pair. */
+/** Return a new object with all the keys and values from obj and a new key/value pair.
+ * Only add the key/value pair if the given key doesn't already exist in the given object.
+ * Otherwise, return a copy of the original object.
+*/
 const addKeyVal = (obj, key, val) => {
 
     return key in obj ? {...obj} : {...obj, [key] : val};
@@ -83,7 +86,10 @@ const combine = (obj1, obj2) => {
     return {...obj1, ...obj2};
 }
 
-/** Return a new object with a modified key and value. */
+/** Return a new object with a modified key and value.
+ * Only modify the given key/value pair if the key exists in the given object.
+ * Otherwise, return a copy of the original object.
+*/
 const update = (obj, key, val) => {
 
     return key in obj ? {...obj, [key] : val} : {...obj};
